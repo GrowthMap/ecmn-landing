@@ -858,12 +858,13 @@
     font-size: 80px;
     flex-shrink: 0;
     overflow: hidden;
+    aspect-ratio: 220 / 260;
   }
 
   .trainer-photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
   }
 
@@ -1236,7 +1237,13 @@
     .footer-top { grid-template-columns: 1fr; gap: 28px; }
 
     .trainer-inner { grid-template-columns: 1fr; }
-    .trainer-photo { width: 100%; height: 200px; }
+    .trainer-photo {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      margin: 0 auto;
+      aspect-ratio: 220 / 260;
+    }
 
     .form-row { grid-template-columns: 1fr; }
 
