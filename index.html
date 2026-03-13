@@ -1,15 +1,1803 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=sms-ecmn-landing.html" />
-    <title>Sit Means Sit – East Central Minnesota</title>
-  </head>
-  <body>
-    <p>
-      If you are not redirected automatically,
-      <a href="sms-ecmn-landing.html">click here to view the landing page</a>.
-    </p>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Dog Trainers in East Central Minnesota | Sit Means Sit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #00387E;
+    --navy-mid: #0b294f;
+    --blue-accent: #0050b3;
+    --gold: #F6D134;
+    --gold-dark: #C9A800;
+    --white: #ffffff;
+    --light-gray: #f4f5f7;
+    --text-muted: #8a9ab5;
+    --border: rgba(255,255,255,0.1);
+  }
 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: #fff;
+    color: #1a1a2e;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    height: 52px;
+    width: auto;
+  }
+
+  .logo-text {
+    line-height: 1.1;
+  }
+
+  .logo-text .brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+
+  .logo-text .brand span {
+    color: var(--gold);
+  }
+
+  .logo-text .sub {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  nav a {
+    color: #cdd6f0;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--gold); }
+
+  .phone-link {
+    color: var(--gold) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+  }
+
+  .btn-nav {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 9px 18px !important;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    transition: background 0.2s !important;
+  }
+
+  .btn-nav:hover { background: var(--gold-dark) !important; color: var(--navy) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600&q=80&fit=crop');
+    background-size: cover;
+    background-position: center 30%;
+    display: flex;
+    align-items: center;
+    padding: 100px 24px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Dark gradient overlay over photo */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      rgba(0, 56, 126, 0.78) 0%,
+      rgba(0, 56, 126, 0.7) 45%,
+      rgba(0, 56, 126, 0.4) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .paw-bg { display: none; }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stars-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .star {
+    color: var(--gold);
+    font-size: 20px;
+  }
+
+  .stars-label {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 4px;
+  }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 900;
+    line-height: 0.92;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 .highlight {
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 600;
+    color: #cdd6f0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 18px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary .arrow {
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .guarantee {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    color: #8a9ab5;
+    font-size: 13px;
+  }
+
+  .guarantee .check {
+    color: #4ade80;
+    font-size: 16px;
+  }
+
+  /* GHL FORM CARD */
+  .booking-card {
+    background: #07448f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.65);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(246,209,52,0.18);
+  }
+
+  .card-header {
+    background: var(--gold);
+    padding: 16px 24px 14px;
+  }
+
+  .card-header .eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--navy);
+    opacity: 0.7;
+    margin-bottom: 2px;
+  }
+
+  .card-header h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .card-steps {
+    background: rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .step-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex: 1;
+  }
+
+  .step-num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-text {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.2;
+  }
+
+  /* GHL iframe wrapper — seamless dark bg */
+  .ghl-iframe-wrap {
+    padding: 0;
+    flex: 1;
+    background: #07448f;
+  }
+
+  .ghl-iframe-wrap iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #07448f;
+  }
+
+  .card-guarantee {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 18px;
+    background: rgba(246,209,52,0.08);
+    border-top: 1px solid rgba(246,209,52,0.2);
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  .card-guarantee strong {
+    color: var(--gold);
+  }
+
+  .booking-card-body {
+    padding: 20px 22px 18px;
+    color: #e5e7eb;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .booking-card-body p {
+    margin-bottom: 10px;
+  }
+
+  .booking-card-body .btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .card-fineprint {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 10px;
+  }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--navy);
+    padding: 28px 24px;
+  }
+
+  .stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    text-align: center;
+  }
+
+  .stat-val {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 44px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8a9ab5;
+    margin-top: 4px;
+  }
+
+  /* PAIN SECTION */
+  .section {
+    padding: 80px 24px;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .eyebrow-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--gold-dark);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--blue-accent);
+    margin-bottom: 40px;
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .pain-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .pain-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+    padding: 14px 18px;
+    background: #f9fafb;
+    border-left: 4px solid #e5e7eb;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .pain-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .pain-body p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #4b5563;
+    margin-bottom: 16px;
+  }
+
+  .pain-callout {
+    background: var(--navy);
+    color: #cdd6f0;
+    border-radius: 10px;
+    padding: 28px;
+    margin-top: 8px;
+  }
+
+  .pain-callout h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .callout-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .callout-items li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .callout-items li::before {
+    content: '✓';
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  .callout-note {
+    font-size: 12px;
+    color: #8a9ab5;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* WHY MOBILE SECTION */
+  .why-section {
+    background: var(--light-gray);
+    padding: 80px 24px;
+  }
+
+  .why-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .why-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .why-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 32px 24px;
+    border-top: 4px solid var(--gold);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+
+  .why-card .icon-wrap {
+    width: 52px;
+    height: 52px;
+    background: #fdf9d6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .why-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .why-card p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #6b7280;
+  }
+
+  /* REVIEWS SECTION */
+  .reviews-section {
+    padding: 80px 24px;
+    background: #fff;
+  }
+
+  .reviews-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .reviews-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .google-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--light-gray);
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .google-g {
+    width: 24px;
+    height: 24px;
+    background: #4285F4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .review-card {
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .review-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
+
+  .review-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #374151;
+    flex: 1;
+  }
+
+  .reviewer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .reviewer-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--blue-accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .reviewer-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+
+  .reviewer-date {
+    font-size: 11px;
+    color: #9ca3af;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--navy);
+    padding: 80px 24px;
+  }
+
+  .cta-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-inner .eyebrow-tag {
+    color: var(--gold);
+  }
+
+  .cta-inner .section-title {
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .cta-desc {
+    font-size: 17px;
+    color: #8a9ab5;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  /* GHL FORM EMBED PLACEHOLDER */
+  .form-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .form-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .form-sub {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 24px;
+  }
+
+  /* GHL embed target */
+  #ghl-form-embed {
+    min-height: 420px;
+  }
+
+  /* Fallback form styling (shown if GHL not loaded) */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .form-field label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #374151;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 12px 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    color: #1a1a2e;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #fff;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--blue-accent);
+  }
+
+  .form-field.full { grid-column: 1 / -1; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 8px;
+  }
+
+  .form-submit:hover {
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+  }
+
+  .form-privacy {
+    font-size: 11px;
+    color: #9ca3af;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  /* TRAINER SECTION */
+  .trainer-section {
+    padding: 70px 24px;
+    background: var(--light-gray);
+  }
+
+  .trainer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .trainer-photo {
+    width: 220px;
+    height: 260px;
+    background: var(--blue-accent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .trainer-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .trainer-bio .eyebrow-tag { color: var(--gold-dark); }
+
+  .trainer-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .trainer-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--blue-accent);
+    margin-bottom: 20px;
+  }
+
+  .trainer-bio p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #4b5563;
+    margin-bottom: 16px;
+  }
+
+  /* SERVICE AREAS */
+  .areas-section {
+    padding: 60px 24px;
+    background: #fff;
+  }
+
+  .areas-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .areas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  .area-tag {
+    background: var(--light-gray);
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid #e5e7eb;
+  }
+
+  /* STICKY CTA BAR */
+  .sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    border-top: 3px solid var(--gold);
+    padding: 14px 24px;
+    z-index: 99;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .sticky-bar-text {
+    color: #cdd6f0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .sticky-bar-text strong {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .sticky-btn {
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .sticky-btn:hover { background: var(--gold-dark); }
+
+  /* FOOTER */
+  footer {
+    background: #060b18;
+    padding: 48px 24px 32px;
+    color: #8a9ab5;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 28px;
+  }
+
+  .footer-brand .logo-text .brand { font-size: 22px; }
+
+  .footer-tagline {
+    font-size: 13px;
+    color: #6b7a99;
+    margin-top: 8px;
+    line-height: 1.6;
+    max-width: 220px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #cdd6f0;
+    margin-bottom: 14px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col ul li {
+    font-size: 13px;
+    color: #6b7a99;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+  }
+
+  .footer-col ul li span {
+    color: #6b7a99;
+  }
+
+  .footer-col a {
+    color: #6b7a99;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-bottom a {
+    color: #6b7a99;
+    text-decoration: none;
+  }
+
+  .social-links {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cdd6f0;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .social-link:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .reviews-more {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 4px;
+    border: 1px solid var(--blue-accent);
+    color: var(--blue-accent);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--blue-accent);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  /* MODAL */
+  .modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    overflow-y: auto;
+    padding: 24px 0;
+  }
+
+  .modal.open {
+    display: flex;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-dialog {
+    position: relative;
+    background: #07448f;
+    border-radius: 14px;
+    max-width: 720px;
+    width: 100%;
+    margin: 16px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+    border: 1px solid rgba(246,209,52,0.32);
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .modal-header {
+    padding: 20px 24px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+
+  .modal-header h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .modal-body {
+    padding: 0;
+    background: #07448f;
+  }
+
+  .modal-body iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #07448f;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(15,23,42,0.9);
+    color: #e5e7eb;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+  }
+
+  .modal-close:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-1px);
+  }
+
+  body.modal-open {
+    overflow: hidden;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav .hide-mobile { display: none; }
+
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .booking-card { max-width: 500px; margin: 0 auto; width: 100%; }
+
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+
+    .pain-grid { grid-template-columns: 1fr; }
+
+    .why-cards { grid-template-columns: 1fr; }
+
+    .reviews-grid { grid-template-columns: 1fr; }
+
+    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+
+    .trainer-inner { grid-template-columns: 1fr; }
+    .trainer-photo { width: 100%; height: 200px; }
+
+    .form-row { grid-template-columns: 1fr; }
+
+    .footer-bottom { flex-direction: column; text-align: center; }
+
+    .sticky-bar { display: flex; }
+
+    body { padding-bottom: 80px; }
+  }
+
+  @media (max-width: 600px) {
+    header {
+      padding: 0 12px;
+      height: 64px;
+    }
+    .logo-icon {
+      height: 40px;
+    }
+    .phone-link { display: none; }
+    .btn-nav { padding: 6px 12px !important; font-size: 11px !important; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat-val { font-size: 34px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .reviews-header { flex-direction: column; align-items: flex-start; }
+    .why-cards { grid-template-columns: 1fr; }
+    .form-container { padding: 24px 18px; }
+  }
+
+  /* Scroll animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-text">
+    <strong>FREE Online Consultation</strong>
+    We come to YOU — East Central MN
+  </div>
+  <a href="#consult" class="sticky-btn js-open-modal">Book Free →</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo-wrap">
+    <img src="logo.svg" alt="Sit Means Sit East Central Minnesota" class="logo-icon">
+  </a>
+
+  <nav>
+    <a href="#why-mobile" class="hide-mobile">Why Mobile</a>
+    <a href="#reviews" class="hide-mobile">Reviews</a>
+    <a href="#consult" class="hide-mobile">Consult</a>
+    <a href="tel:+16518909533" class="phone-link hide-mobile">(651) 890-9533</a>
+    <a href="#consult" class="btn-nav js-open-modal">Free Consult</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="stars-row">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <span class="star">★</span><span class="star">★</span>
+        <span class="stars-label">4.9 · 55 Google Reviews</span>
+      </div>
+      <h1>
+        Top Dog Trainers
+        <span class="highlight">That Come<br>To You</span>
+      </h1>
+      <p class="hero-sub">East Central Minnesota · Mobile Training</p>
+      <a href="#consult" class="btn-primary js-open-modal">
+        Claim Your Free Consultation
+        <span class="arrow">›</span>
+      </a>
+      <div class="guarantee">
+        <span class="check">✓</span>
+        <span><strong style="color:#cdd6f0">No travel fees. No kennel stress.</strong> We train at YOUR home, in your dog's actual environment.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-val">55+</div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+    <div>
+      <div class="stat-val">4.9★</div>
+      <div class="stat-label">Average Rating</div>
+    </div>
+    <div>
+      <div class="stat-val">9+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div>
+      <div class="stat-val">FREE</div>
+      <div class="stat-label">First Consultation</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN SECTION -->
+<section class="section" id="why-us">
+  <div class="section-inner">
+    <div class="pain-grid">
+      <div>
+        <span class="eyebrow-tag">Why dog owners reach out</span>
+        <h2 class="section-title">When Your Dog<br>Stops Listening…</h2>
+        <p class="section-subtitle">The Problem Is Usually the Training — Not the Dog</p>
+        <ul class="pain-list">
+          <li><span class="pain-icon">🚮</span> Pulling on the leash every walk</li>
+          <li><span class="pain-icon">📢</span> Ignoring commands around distractions</li>
+          <li><span class="pain-icon">🚪</span> Jumping on guests &amp; bolting out doors</li>
+          <li><span class="pain-icon">🐕</span> Barking, nipping, or reactive behavior</li>
+          <li><span class="pain-icon">😰</span> Anxiety, fear, or aggression issues</li>
+        </ul>
+      </div>
+      <div>
+        <div class="pain-body">
+          <p>Most owners start with patience. Then frustration sets in. You start wondering if your dog will ever really listen — or if this behavior is just part of their personality.</p>
+          <p>In most cases, it's not. Behavior problems usually come from a breakdown in communication between owner and dog, not stubbornness. The good news is that once the communication is fixed, behavior often changes quickly.</p>
+          <p><strong>That's exactly what we help you with.</strong></p>
+        </div>
+
+        <div class="pain-callout">
+          <h3>Bring your dog in for a free online consultation — we'll show you:</h3>
+          <ul class="callout-items">
+            <li>What's actually causing the behavior</li>
+            <li>Whether it can realistically be corrected</li>
+            <li>How long improvement typically takes</li>
+            <li>Which training program fits your dog best</li>
+          </ul>
+          <p class="callout-note">No guessing. No vague advice. Just a clear understanding of what's going on with your dog — in the comfort of your own home.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MOBILE -->
+<section class="why-section" id="why-mobile">
+  <div class="why-inner">
+    <div style="text-align:center;">
+      <span class="eyebrow-tag">The mobile training difference</span>
+      <h2 class="section-title" style="margin-bottom:8px;">We Come to You</h2>
+      <p style="font-size:18px; color:#4b5563; max-width:600px; margin:0 auto;">No driving. No kennels. No stress for your dog. Training that actually sticks because it happens <em>right where your dog lives</em>.</p>
+    </div>
+
+    <div class="why-cards">
+      <div class="why-card fade-in">
+        <div class="icon-wrap">🏠</div>
+        <h3>Train in the Real Environment</h3>
+        <p>Your dog doesn't misbehave in a training facility — they misbehave at home, on your street, in your yard. That's exactly where we train. Results transfer immediately because the environment is already familiar.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="icon-wrap">🚗</div>
+        <h3>Zero Hassle for You</h3>
+        <p>No loading the car. No scheduling around facility hours. No dragging an anxious dog into a new place. We arrive at your door, work with your dog, and leave you with a clear plan — on your schedule.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="icon-wrap">⚡</div>
+        <h3>Faster, Longer-Lasting Results</h3>
+        <p>Research shows dogs retain training better when it happens in the context they'll actually use it. In-home training means less generalization needed — your dog learns the rules of YOUR world, not a classroom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header">
+      <div>
+        <span class="eyebrow-tag">What local dog owners are saying</span>
+        <h2 class="section-title" style="margin-bottom:0;">Real Dogs.<br>Real Transformations.</h2>
+      </div>
+      <div class="google-badge">
+        <div class="google-g">G</div>
+        <span>4.9 ★★★★★ on Google · 55 reviews</span>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Tessie has turned our Guss, 180 degrees! He was reactive, had no formal training, and was very territorial. After 2 months of training with Sit Means Sit, he is a different dog."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">G</div>
+          <div>
+            <div class="reviewer-name">Gary</div>
+            <div class="reviewer-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Sit Means Sit has made me feel empowered in training my dog. My husky has grown more than I ever could have imagined in just a few weeks. The trainers are helpful, knowledgeable, and really help you understand what you need to do."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">CW</div>
+          <div>
+            <div class="reviewer-name">Christine W.</div>
+            <div class="reviewer-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Sit Means Sit has changed my out-of-control lab, Zoey, into a well-behaved dog. She pulled so badly I couldn't take her for walks. After only one week, she was heeling off-leash right by my side. Now I enjoy hikes, walks, and other outings with her!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">LN</div>
+          <div>
+            <div class="reviewer-name">Lori N.</div>
+            <div class="reviewer-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Tessie is amazing with dogs. We initially went to a behaviouralist with our German Shepherd and were told to medicate him for the rest of his life. Tessie showed us how to actually communicate with him. Game changer."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">JL</div>
+          <div>
+            <div class="reviewer-name">Joey L. &amp; Blue</div>
+            <div class="reviewer-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I cannot say enough great things about this training program. After only a few sessions our dog went from completely unruly to calm and responsive. Tessie clearly loves what she does and it shows in the results."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div>
+            <div class="reviewer-name">Mark K.</div>
+            <div class="reviewer-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Our rescue had serious anxiety and reactivity issues. After training with Sit Means Sit we have a confident, happy dog who can actually enjoy walks and outings. Worth every penny — and the trainers genuinely care."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SR</div>
+          <div>
+            <div class="reviewer-name">Sarah R.</div>
+            <div class="reviewer-date">Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-more">
+      <a
+        class="btn-secondary"
+        href="https://www.google.com/maps/place/Sit+Means+Sit+Dog+Training+-+East+Central+Minnesota/@45.5060353,-92.9963869,500m/data=!3m1!1e3!4m16!1m9!3m8!1s0x52b2e58854b49049:0xf2d4cfdf6c4fda47!2sSit+Means+Sit+Dog+Training+-+East+Central+Minnesota!8m2!3d45.5060353!4d-92.9963869!9m1!1b1!16s%2Fg%2F11hs9fcjss!3m5!1s0x52b2e58854b49049:0xf2d4cfdf6c4fda47!8m2!3d45.5060353!4d-92.9963869!16s%2Fg%2F11hs9fcjss?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener"
+      >
+        See more Google reviews
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINER SECTION -->
+<section class="trainer-section">
+  <div class="trainer-inner">
+    <div class="trainer-photo">
+      <img src="tessie.jpg" alt="Tessie Glazek, your trainer">
+    </div>
+    <div class="trainer-bio">
+      <span class="eyebrow-tag">Your Trainer</span>
+      <div class="trainer-name">Tessie Glazek</div>
+      <div class="trainer-title">Owner &amp; Head Trainer · Sit Means Sit East Central MN</div>
+      <p>Hi, I'm Tessie — the owner of Sit Means Sit East Central Minnesota. I've been part of the Sit Means Sit family since 2015, first as a client, then as a trainer starting in 2017, and as owner since 2020.</p>
+      <p>My journey started with my own aggressive pit bull. Through these training methods, we went from rarely leaving the house to going on daily adventures together. That transformation is what drives me to help other dog owners every single day.</p>
+      <a href="#consult" class="btn-primary js-open-modal" style="font-size:17px; padding:15px 28px;">Book Your Free Consultation <span class="arrow">›</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA ANCHOR — scroll to hero form -->
+<section class="cta-section" id="consult">
+  <div class="cta-inner">
+    <span class="eyebrow-tag">Ready to get started?</span>
+    <h2 class="section-title">Book Your Free<br>Online Consultation</h2>
+    <p class="cta-desc">It's a real, one-on-one conversation with a certified trainer. We'll figure out exactly what your dog needs — and how we can help, coming to your home in East Central Minnesota.</p>
+    <a href="#consult" class="btn-primary js-open-modal" style="font-size:20px; padding:18px 40px; margin:0 auto; display:inline-flex;">
+      Book My Free Consultation
+      <span class="arrow">›</span>
+    </a>
+    <p style="color:#8a9ab5; font-size:13px; margin-top:16px;">🔒 Free, no obligation. We contact you within 24 hours.</p>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-section">
+  <div class="areas-inner">
+    <span class="eyebrow-tag">Where we train</span>
+    <h2 class="section-title">We Serve East Central Minnesota</h2>
+    <p style="color:#6b7280; font-size:16px; margin-top:8px;">We travel to your home across East Central MN. Don't see your city? Call us — we likely cover it!</p>
+    <div class="areas-grid">
+      <span class="area-tag">North Branch</span>
+      <span class="area-tag">Forest Lake</span>
+      <span class="area-tag">Wyoming</span>
+      <span class="area-tag">Pine City</span>
+      <span class="area-tag">Cambridge</span>
+      <span class="area-tag">Isanti</span>
+      <span class="area-tag">Stacy</span>
+      <span class="area-tag">Rush City</span>
+      <span class="area-tag">Rock Creek</span>
+      <span class="area-tag">Harris</span>
+      <span class="area-tag">East Bethel</span>
+      <span class="area-tag">Elk River</span>
+      <span class="area-tag">Lindstrom</span>
+      <span class="area-tag">Taylors Falls</span>
+      <span class="area-tag">Scandia</span>
+      <span class="area-tag">Saint Francis</span>
+      <span class="area-tag">Chisago City</span>
+      <span class="area-tag">Marine on St. Croix</span>
+      <span class="area-tag">Shafer</span>
+      <span class="area-tag">Oak Grove</span>
+      <span class="area-tag">Linwood</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION MODAL -->
+<div class="modal" id="consultModal" aria-hidden="true">
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="consultModalTitle">
+    <button class="modal-close" type="button" aria-label="Close consultation form" data-modal-close>&times;</button>
+    <div class="modal-header">
+      <h2 id="consultModalTitle">Book Your Free Online Consultation</h2>
+    </div>
+    <div class="modal-body">
+      <iframe
+        src="https://ecmlinks.sitmeanssit.com/widget/form/ZEXSkHOmjyOZZEeiHEqv"
+        style="width:100%;height:660px;border:none;border-radius:0px"
+        id="inline-ZEXSkHOmjyOZZEeiHEqv" 
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Google Ads LP Contact Form"
+        data-height="660"
+        data-layout-iframe-id="inline-ZEXSkHOmjyOZZEeiHEqv"
+        data-form-id="ZEXSkHOmjyOZZEeiHEqv"
+        title="Google Ads LP Contact Form"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER CTA BANNER -->
+<div style="background:var(--gold); padding:28px 24px;">
+  <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+    <div>
+      <p style="font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:900; text-transform:uppercase; color:var(--navy); line-height:1;">We'll Solve Your Dog Problems.</p>
+      <p style="font-size:14px; color:#4a3800; margin-top:4px;">East Central Minnesota's mobile dog training experts. Any dog. Any age. Any problem.</p>
+    </div>
+    <a href="#consult" class="btn-primary js-open-modal" style="background:var(--navy); color:#fff; font-size:18px;">Book My Free Consultation ›</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- Col 1: Description -->
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+          <img src="logo.svg" alt="Sit Means Sit East Central Minnesota" style="height:32px; width:auto; flex-shrink:0;">
+        </div>
+        <p class="footer-tagline">East Central Minnesota's mobile dog training experts. We come to your home — any dog, any age, any problem. Serving Forest Lake, North Branch, Cambridge, Isanti, and all surrounding areas.</p>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/Sit-Means-Sit-East-Central-Minnesota-109308640630274/"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            aria-label="Visit us on Facebook"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
+              <path fill="currentColor" d="M13 3h3a1 1 0 0 1 1 1v3h-2.5a1.5 1.5 0 0 0-1.5 1.5V12h4l-.5 4h-3.5v5h-4v-5H7v-4h2.5V8.5A4.5 4.5 0 0 1 13 4z"/>
+            </svg>
+            <span class="sr-only">Facebook</span>
+          </a>
+          <a
+            href="https://www.instagram.com/sitmeanssit_ecmn/"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            aria-label="Visit us on Instagram"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+            </svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#why-us">Why Mobile Training</a></li>
+          <li><a href="#why-mobile">How It Works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#consult">Free Consultation</a></li>
+          <li><a href="https://sitmeanssit.com/dog-training-mu/east-central-minnesota-dog-training/" target="_blank">Main Website ↗</a></li>
+          <li><a href="https://sitmeanssit.com/locations/" target="_blank">Other SMS Locations ↗</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>
+            <span style="color:#F6D134;font-size:13px;">📞</span>
+            <a href="tel:+16518909533">(651) 890-9533</a>
+          </li>
+          <li>
+            <span style="color:#F6D134;font-size:13px;">✉️</span>
+            <a href="mailto:eastcentralmn@sitmeanssit.com">eastcentralmn@sitmeanssit.com</a>
+          </li>
+          <li>
+            <span style="color:#F6D134;font-size:13px;">📍</span>
+            <span>North Branch, MN 55056</span>
+          </li>
+          <li style="flex-direction:column; align-items:flex-start; gap:4px;">
+            <span style="color:#F6D134; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Hours</span>
+            <span>Mon – Wed: 8am – 8pm</span>
+            <span>Thu: 1pm – 8pm</span>
+            <span>Fri – Sat: By Appointment</span>
+            <span>Sun: Closed</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Sit Means Sit Dog Training – East Central Minnesota. All rights reserved.</span>
+      <span>
+        <a href="https://sitmeanssit.com/legal-notices/" target="_blank">Privacy & Legal</a> ·
+        <a href="https://sitmeanssit.com/locations/" target="_blank">Find Other Locations</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Smooth scroll for anchor links (excluding modal triggers)
+  document.querySelectorAll('a[href^="#"]:not(.js-open-modal)').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 120);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Form submission placeholder
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Request Received! We\'ll be in touch shortly.';
+    btn.style.background = '#16a34a';
+    btn.style.color = '#fff';
+    btn.disabled = true;
+  }
+
+  // Show sticky bar after scroll
+  const stickyBar = document.getElementById('stickyBar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      stickyBar.style.display = 'flex';
+    } else {
+      stickyBar.style.display = 'none';
+    }
+  });
+
+  // Modal logic
+  const modal = document.getElementById('consultModal');
+  const openModalButtons = document.querySelectorAll('.js-open-modal');
+  const modalCloseTargets = document.querySelectorAll('[data-modal-close]');
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    if (!modal) return;
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+
+  openModalButtons.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+
+  modalCloseTargets.forEach(el => {
+    el.addEventListener('click', closeModal);
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+</script>
+
+<!-- GHL Form Embed Script -->
+<script src="https://ecmlinks.sitmeanssit.com/js/form_embed.js"></script>
+</body>
+</html>
