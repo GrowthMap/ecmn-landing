@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NFC2KQ7J');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pick Your Time | Sit Means Sit East Central Minnesota</title>
@@ -196,10 +203,14 @@
     /* CONFIRM HERO */
     .confirm-hero {
       background: var(--navy);
-      padding: 120px 24px 60px;
+      min-height: 100vh;
+      padding: 68px 24px 0;
       text-align: center;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .confirm-hero::before {
@@ -242,7 +253,7 @@
       text-transform: uppercase;
       letter-spacing: 2.5px;
       color: var(--gold);
-      margin-bottom: 24px;
+      margin-bottom: 40px;
       animation: badgePop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
     }
 
@@ -266,7 +277,7 @@
       color: #fff;
       text-transform: uppercase;
       letter-spacing: -0.5px;
-      margin-bottom: 20px;
+      margin-bottom: 32px;
       animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
     }
 
@@ -280,7 +291,7 @@
       color: #cdd6f0;
       line-height: 1.6;
       max-width: 580px;
-      margin: 0 auto 32px;
+      margin: 0 auto 48px;
       animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
     }
 
@@ -337,10 +348,62 @@
       animation: pulse 2s ease-in-out infinite;
     }
 
+    /* HERO BOTTOM WAVE */
+    .hero-wave {
+      display: block;
+      line-height: 0;
+      background: var(--navy);
+      margin-bottom: -2px;
+    }
+    .hero-wave svg {
+      display: block;
+      width: 100%;
+    }
+
+    /* SCROLL INDICATOR */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+    }
+
+    .scroll-indicator span {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.35);
+      transition: color 0.2s;
+    }
+
+    .scroll-indicator:hover span {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .scroll-indicator:hover .scroll-arrow {
+      stroke: rgba(255, 215, 0, 0.8);
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0); opacity: 0.4; }
+      50%       { transform: translateY(6px); opacity: 1; }
+    }
+
+    .scroll-arrow {
+      animation: scrollBounce 1.6s ease-in-out infinite;
+    }
+
     /* CALENDAR SECTION */
     .calendar-section {
       background: var(--light-gray);
-      padding: 64px 24px 80px;
+      padding: 72px 24px 88px;
     }
 
     .calendar-inner {
@@ -809,15 +872,37 @@
           Meet your trainer online
         </div>
       </div>
+
+      <!-- Scroll down cue (outside confirm-inner so it can be absolutely positioned) -->
+    </div><!-- /.confirm-inner -->
+    <a href="#calendar" class="scroll-indicator">
+      <span>Select a time below</span>
+      <svg class="scroll-arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
     </div>
   </section>
 
-  <!-- CALENDAR EMBED -->
-  <div id="calendar" style="padding: 40px 24px;">
-    <div style="max-width: 960px; margin: 0 auto;" class="reveal">
-      <iframe src="https://ecmlinks.sitmeanssit.com/widget/booking/vekpEiQbKgrkehdyQF0b" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="WhxI8sgrfjNOWh3BZhoQ_1773859590120"></iframe>
-    </div>
+  <!-- HERO → CALENDAR WAVE TRANSITION -->
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C360,56 1080,56 1440,0 L1440,0 L0,0 Z" fill="var(--navy)"/>
+      <path d="M0,0 C360,56 1080,56 1440,0" fill="none" stroke="rgba(255,215,0,0.18)" stroke-width="1.5"/>
+    </svg>
   </div>
+
+  <!-- CALENDAR SECTION -->
+  <section id="calendar" class="calendar-section">
+    <div class="calendar-inner">
+      <div class="calendar-header reveal">
+        <div class="eyebrow-tag">Step 2 of 3</div>
+        <h2 class="section-title">Choose Your Date &amp; Time</h2>
+        <p>Pick whatever slot fits your schedule — we'll meet online and walk through exactly what your dog needs.</p>
+      </div>
+      <div class="calendar-embed-wrap reveal">
+        <iframe src="https://ecmlinks.sitmeanssit.com/widget/booking/vekpEiQbKgrkehdyQF0b" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="WhxI8sgrfjNOWh3BZhoQ_1773859590120"></iframe>
+      </div>
+    </div>
+  </section>
 
   <!-- REASSURANCE STRIP -->
   <div class="reassurance-strip">
