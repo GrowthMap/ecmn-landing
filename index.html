@@ -27,6 +27,12 @@
       --border: rgba(255, 255, 255, 0.15);
     }
 
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -37,7 +43,6 @@
       font-family: 'Barlow', sans-serif;
       background: #fff;
       color: #1a1a2e;
-      overflow-x: hidden;
     }
 
     /* HEADER */
@@ -61,11 +66,15 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
+      flex-shrink: 1;
+      min-width: 0;
     }
 
     .logo-icon {
       height: 36px;
       width: auto;
+      max-width: 100%;
+      object-fit: contain;
     }
 
     .logo-text {
@@ -1372,7 +1381,7 @@
       }
 
       .logo-icon {
-        height: 40px;
+        height: 34px; /* Reduced slightly to fit better on small screens */
       }
 
       .phone-link {
